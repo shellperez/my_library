@@ -7,5 +7,62 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <p class="ion-text-center ion-text-uppercase">kon'nichiwa</p>
+  <p class="ion-text-center ion-text-uppercase">ALIANZA LITERARIA</p>
+  
+  <ion-slides [options]="slidesOps">
+    <ion-slide *ngFor="let author of authors">
+        <ion-avatar (click)="showBooks(author)">
+            <img src="{{author.photo}}"/>
+            <span>{{author.name}}</span>
+        </ion-avatar>
+    </ion-slide>
+</ion-slides>
+  <ion-grid>
+    <ion-row>
+        <ion-col size="6">
+            <ion-card class="ion-text-center" color="primary" (click)="goToAuthors()">
+                <ion-card-header>
+                  <ion-card-title>Autores</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-icon name="people-outline"></ion-icon>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+        <ion-col size="6">
+            <ion-card class="ion-text-center" color="primary" (click)="goToBooks()">
+                <ion-card-header>
+                  <ion-card-title>Libros</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-icon name="book-outline"></ion-icon>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    
+    <ion-row>
+        <ion-col size="6">
+            <ion-card  class="ion-text-center"color="primary" (click)="goToMyFavorites()">
+                <ion-card-header>
+                  <ion-card-title>Favoritos</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-icon name="heart-outline"></ion-icon>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+        <ion-col size="6">
+            <ion-card  class="ion-text-center"color="primary" (click)="goToTopBooks()">
+                <ion-card-header>
+                  <ion-card-title>Top 10</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-icon name="list-outline"></ion-icon>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+
 </ion-content>

@@ -11,6 +11,22 @@ const routes: Routes = [
       {
         path: 'home',
     loadChildren: () => import('../home/home.module').then( m => m.HomePageModule)
+      },
+       {
+        path: 'authors',
+        loadChildren: () => import('../authors/authors.module').then( m => m.AuthorsPageModule)
+      },
+      {
+        path: 'books',
+        loadChildren: () => import('../books/books.module').then( m => m.BooksPageModule)
+      },
+      {
+        path: 'favorite-books',
+        loadChildren: () => import('../favorite-books/favorite-books.module').then( m => m.FavoriteBooksPageModule)
+      },
+      {
+        path: 'top10',
+        loadChildren: () => import('../top10/top10.module').then( m => m.Top10PageModule)
       }
     ]
   }

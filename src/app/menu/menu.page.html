@@ -11,9 +11,29 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
+      <ion-item (click)="goToHome()">
+        <ion-icon name="home-outline" slot="start"></ion-icon>
+        Inicio
+      </ion-item>
+
+      <ion-item (click)="goToAuthors()">
+        <ion-icon name="authors-outline" slot="start"></ion-icon>
+        Autores
+      </ion-item>
+
+      <ion-item (click)="goToBooks()">
+        <ion-icon name="book-outline" slot="start"></ion-icon>
+        Libros
+      </ion-item>
+
+      <ion-item (click)="goToMyFavorites()">
+        <ion-icon name="heart-circle-outline"  slot="start"></ion-icon>
+        Mis Favoritos
+      </ion-item>
+
       <ion-item (click)="logout()">
         <ion-icon name="logout" slot="start"></ion-icon>
-        Salir
+        Cerrar Sesión
       </ion-item>
     </ion-content>
   </ion-menu>

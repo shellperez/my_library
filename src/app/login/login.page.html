@@ -39,19 +39,17 @@
     </div>
 
 
-    <ion-button (click)="home()" color="medium" shape="round">
-      Login
-    </ion-button>
-
+    <ion-button 
+shape="round"
+color="medium"
+[disabled]="!loginForm.valid"
+type="submit">
+  Login
+</ion-button>
   </form>
-  {{ errorMessage }}
+ 
   <ion-button (click)="Register()" color="dark" shape="round">
     Registrarse
   </ion-button>
 </ion-content>
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>HOLA</ion-title>
 
-  </ion-toolbar>
-</ion-footer>

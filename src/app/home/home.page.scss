@@ -1,0 +1,41 @@
+ion-avatar {
+    height: 150px;
+    width: 100%;
+    font-size: 15px;
+    //--border-radius: 0;
+}
+
+ion-avatar img {
+    width: 90px;
+    height: 90px;
+    
+    font-size: 15px;
+}
+ion-card {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+
+ion-card ion-card-header {
+    padding: 10px 10px;
+}
+
+ion-card ion-card-content {
+    padding: 10px 10px;
+}
+
+ion-card-content ion-icon {
+    font-size: 30px;
+}
+
+ion-card ion-card-title {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+ion-card ion-card-content {
+    font-size: .8em;
+    text-transform: lowercase;
+}

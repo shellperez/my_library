@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">Cerrar</ion-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-button *ngIf="!like_button" (click)="like()">
+        <ion-icon name="heart-outline"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="like_button" (click)="disLike()">
+        <ion-icon name="heart-dislike-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 class="ion-text-center">{{book.name}}</h1>
+  <img src="{{book.cover}}" class="cover"/>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">Paginas</ion-col>
+      <ion-col class="ion-text-center">Editorial</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">{{book.pages}}</ion-col>
+      <ion-col class="ion-text-center">{{book.editorial}}</ion-col>
+    </ion-row>
+  </ion-grid>
+  <p class="ion-margin ion-text-justify">{{book.resumen}}</p>
+  <p class="ion-margin"><ion-icon name="calendar-outline"></ion-icon> {{book.published_date}}</p>
+  <p class="ion-margin">Generos:</p>
+  <ion-badge *ngFor="let gender of book.genres" class="ion-margin">{{gender}}</ion-badge>
+</ion-content>

@@ -12,7 +12,7 @@ export class LoginGuard implements CanActivate {
   async canActivate(){
     const login = await this.storage.get("isUserLoggedIn");
     if (login){
-      return true;
+      return false;
     }else{
       this.navCtrl.navigateForward("login");
       return false;
