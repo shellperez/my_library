@@ -4,12 +4,11 @@
       <ion-back-button text="Volver" ></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-menu-button ></ion-menu-button>
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Autores</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let author of authors" (click)="showAuthor(author.id)">

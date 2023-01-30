@@ -32,7 +32,7 @@ export class AuthenticateService {
         }
       })
 
-
+      
     });
   }
  

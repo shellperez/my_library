@@ -11,7 +11,7 @@ import { LibraryService } from '../services/library.service';
 export class BooksModalPage implements OnInit {
 
   author: any;
-  books: any
+  listBooks: any
 
   constructor( 
     private navParams: NavParams,
@@ -20,13 +20,17 @@ export class BooksModalPage implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.libraryService.getBooksAuthor(this.author.id).then(books => {
-      this.books = books;
-    })
+
   }
 
   ionViewDidEnter() {
-    this.author = this.navParams.get("author");
+   this.libraryService.getBooksAuthor(this.author.id).then((data:any) =>{
+    this.listBooks = data
+    console.log(this.listBooks)
+   },
+     (error) =>
+       console.log(error)
+     )
   }
 
   closeModal(){
