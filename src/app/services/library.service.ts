@@ -6,6 +6,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class LibraryService {
+  getFavoriteb() {
+    throw new Error('Method not implemented.');
+  }
 
   urlServer = "https://librarypca.fly.dev/";
   httpHeaders = { headers: new HttpHeaders({"Content-Type": "application/json"}) };

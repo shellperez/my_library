@@ -13,6 +13,7 @@
     <ion-slide *ngFor="let author of authors">
         <ion-avatar (click)="showBooks(author)">
             <img src="{{author.photo}}"/>
+            <br>
             <span>{{author.name}}</span>
         </ion-avatar>
     </ion-slide>
@@ -48,7 +49,7 @@
                   <ion-card-title>Favoritos</ion-card-title>
                 </ion-card-header>
                 <ion-card-content>
-                    <ion-icon name="heart-outline"></ion-icon>
+                    <ion-icon name="heart-circle-outline"></ion-icon>
                 </ion-card-content>
             </ion-card>
         </ion-col>
@@ -58,7 +59,7 @@
                   <ion-card-title>Top 10</ion-card-title>
                 </ion-card-header>
                 <ion-card-content>
-                    <ion-icon name="list-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
                 </ion-card-content>
             </ion-card>
         </ion-col>
